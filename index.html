@@ -28,6 +28,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#skills">Skills</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#certificates">Certificates</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -156,6 +157,11 @@
           <div class="level">Intermediate</div>
         </div>
         <div class="skill-card reveal">
+          <div class="icon">🐍</div>
+          <div class="name">Python</div>
+          <div class="level">Intermediate</div>
+        </div>
+        <div class="skill-card reveal">
           <div class="icon">🐙</div>
           <div class="name">Git & GitHub</div>
           <div class="level">Intermediate</div>
@@ -242,6 +248,52 @@
       </div>
     </div>
   </section>
+
+  <!-- Certificates -->
+  <section id="certificates">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-label">// Achievements</span>
+        <h2 class="section-title">Certificates & Experience</h2>
+      </div>
+      <div class="certs-grid">
+        <div class="cert-card reveal" onclick="openLightbox('assets/cert-dsa-rinex.png')">
+          <div class="cert-img-wrap">
+            <img src="assets/cert-dsa-rinex.png" alt="DSA in Python — Rinex Organization" loading="lazy" />
+            <div class="cert-overlay">
+              <span class="cert-zoom">🔍 Click to View</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-badge">🏆 Grade A+</div>
+            <h3>Data Structures & Algorithms in Python</h3>
+            <p class="cert-issuer">Rinex Organization</p>
+            <p class="cert-date">June 2025</p>
+          </div>
+        </div>
+        <div class="cert-card reveal" onclick="openLightbox('assets/cert-experience-naukrease.png')">
+          <div class="cert-img-wrap">
+            <img src="assets/cert-experience-naukrease.png" alt="Experience Letter — Naukrease.Com" loading="lazy" />
+            <div class="cert-overlay">
+              <span class="cert-zoom">🔍 Click to View</span>
+            </div>
+          </div>
+          <div class="cert-body">
+            <div class="cert-badge exp">💼 Experience</div>
+            <h3>Operations Executive</h3>
+            <p class="cert-issuer">Naukrease.Com</p>
+            <p class="cert-date">June — August</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox Modal -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Close">✕</button>
+    <img class="lightbox-img" id="lightbox-img" src="" alt="Certificate full view" />
+  </div>
 
   <!-- Education -->
   <section id="education">

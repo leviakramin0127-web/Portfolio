@@ -26,7 +26,7 @@ function animateRing() {
 }
 animateRing();
 
-document.querySelectorAll('a, button, .skill-card, .project-card, .contact-link').forEach(el => {
+document.querySelectorAll('a, button, .skill-card, .project-card, .contact-link, .cert-card').forEach(el => {
   el.addEventListener('mouseenter', () => ring.classList.add('hover'));
   el.addEventListener('mouseleave', () => ring.classList.remove('hover'));
 });
@@ -222,3 +222,23 @@ if (form) {
     }, 3000);
   });
 }
+
+// === LIGHTBOX ===
+function openLightbox(src) {
+  const lightbox = document.getElementById('lightbox');
+  const img = document.getElementById('lightbox-img');
+  img.src = src;
+  lightbox.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeLightbox(e) {
+  if (e && e.target && e.target.classList.contains('lightbox-img')) return;
+  const lightbox = document.getElementById('lightbox');
+  lightbox.classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') closeLightbox();
+});
